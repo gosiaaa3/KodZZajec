@@ -36,4 +36,9 @@ public class KolkoIKrzyzykInterface {
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
 	}
+	public void wygranoGre(String imie){
+		System.out.println("Brawo" + imie + "Wygrałes");
+		Scanner sc = new Scanner(System.in);
+		sc.nextLine(); //czekamy az wcisnie enter
+	}
 }

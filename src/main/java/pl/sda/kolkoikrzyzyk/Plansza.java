@@ -7,11 +7,14 @@ public class Plansza {// tworzymy plansze
 
 	public Plansza() {
 		pola = new String[9];
+		for(int i=1; i<=pola.length; i++){  //zamieniamy w ten sposób bo zmienilismy sprawdzanie z null na liczbe
+			pola[i-1]= String.valueOf(i);
+		}
 	}
 
 	public boolean wstawZnak(String znak, int pozycja) {
 		// metoda do zapisywania znaku w planszy
-		if (pola[pozycja - 1] != null)
+		if (KolkoIKrzyzykUtil.isDigit((pola[pozycja-1]))) //tu zmienilismy
 			return false;// nie jest rozne
 		pola[pozycja - 1] = znak;
 		return true;
@@ -29,10 +32,10 @@ public class Plansza {// tworzymy plansze
 				stringBuilder.append("-----");
 				stringBuilder.append("\n");
 			}
-			if (pola[i] == null) {
-				stringBuilder.append(" ");
+			if (KolkoIKrzyzykUtil.isDigit(pola[i])) {
+				stringBuilder.append(i+1);
 			} else {
-				stringBuilder.append(pola[i]);
+				stringBuilder.append(pola[i]);//np.jesli null lub cos innego
 			}
 			stringBuilder.append("|");
 		}

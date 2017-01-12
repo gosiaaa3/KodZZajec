@@ -11,6 +11,17 @@ public class Plansza {// tworzymy plansze
 			pola[i-1]= String.valueOf(i);
 		}
 	}
+	//potzrebujemygettera do metod sprawdzajacych
+
+	public String[] getPola() {
+		return pola;
+	}
+
+
+	public void setPola(String[] pola) {
+		this.pola = pola;
+	}
+
 
 	public boolean wstawZnak(String znak, int pozycja) {
 		// metoda do zapisywania znaku w planszy

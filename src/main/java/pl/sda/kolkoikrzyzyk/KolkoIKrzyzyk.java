@@ -47,6 +47,13 @@ public class KolkoIKrzyzyk {
 
 				}
 			} while (!czyWstawiono);
+			if(KolkoIKrzyzykUtil.czyzakonczonoGre(plansza)){
+				kolkoIKrzyzykInterfejs.pokazPlansze(plansza);
+				kolkoIKrzyzykInterfejs.wygranoGre(aktualnyGracz);
+				break;
+				
+				
+			}
 		}
 		kolkoIKrzyzykInterfejs.pokazPlansze(plansza);
 		// int pozycja = kolkoIKrzyzykInterfejs.podajPole(gracz1);
